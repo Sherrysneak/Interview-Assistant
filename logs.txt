@@ -1,0 +1,100 @@
+interview-app  | 2026-02-26T13:12:32.384Z  INFO 1 --- [ai-interview-platform] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface interview.guide.modules.knowledgebase.repository.RagChatSessionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+interview-app  | 2026-02-26T13:12:32.385Z  INFO 1 --- [ai-interview-platform] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface interview.guide.modules.resume.repository.ResumeAnalysisRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+interview-app  | 2026-02-26T13:12:32.385Z  INFO 1 --- [ai-interview-platform] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface interview.guide.modules.resume.repository.ResumeRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+interview-app  | 2026-02-26T13:12:32.385Z  INFO 1 --- [ai-interview-platform] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+interview-app  | 2026-02-26T13:12:32.944Z  INFO 1 --- [ai-interview-platform] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+interview-app  | 2026-02-26T13:12:32.954Z  INFO 1 --- [ai-interview-platform] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+interview-app  | 2026-02-26T13:12:32.955Z  INFO 1 --- [ai-interview-platform] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+interview-app  | 2026-02-26T13:12:32.974Z  INFO 1 --- [ai-interview-platform] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1536 ms
+interview-app  | 2026-02-26T13:12:33.135Z  INFO 1 --- [ai-interview-platform] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+interview-app  | 2026-02-26T13:12:33.188Z  INFO 1 --- [ai-interview-platform] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+interview-app  | 2026-02-26T13:12:33.638Z  INFO 1 --- [ai-interview-platform] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+interview-app  | 2026-02-26T13:12:33.670Z  INFO 1 --- [ai-interview-platform] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+interview-app  | 2026-02-26T13:12:33.757Z  INFO 1 --- [ai-interview-platform] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5300694d
+interview-app  | 2026-02-26T13:12:33.758Z  INFO 1 --- [ai-interview-platform] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+interview-app  | 2026-02-26T13:12:33.783Z  WARN 1 --- [ai-interview-platform] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+interview-app  | 2026-02-26T13:12:33.804Z  INFO 1 --- [ai-interview-platform] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+interview-app  | 	Database JDBC URL [jdbc:postgresql://postgres:5432/interview_guide]
+interview-app  | 	Database driver: PostgreSQL JDBC Driver
+interview-app  | 	Database dialect: PostgreSQLDialect
+interview-app  | 	Database version: 16.12
+interview-app  | 	Default catalog/schema: interview_guide/public
+interview-app  | 	Autocommit mode: undefined/unknown
+interview-app  | 	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+interview-app  | 	JDBC fetch size: none
+interview-app  | 	Pool: DataSourceConnectionProvider
+interview-app  | 	Minimum pool size: undefined/unknown
+interview-app  | 	Maximum pool size: undefined/unknown
+interview-app  | 2026-02-26T13:12:34.687Z  INFO 1 --- [ai-interview-platform] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+interview-app  | 2026-02-26T13:12:34.747Z  INFO 1 --- [ai-interview-platform] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+interview-app  | 2026-02-26T13:12:34.825Z  INFO 1 --- [ai-interview-platform] [           main] org.redisson.Version                     : Redisson 4.0.0
+interview-app  | 2026-02-26T13:12:35.133Z  INFO 1 --- [ai-interview-platform] [isson-netty-1-5] o.redisson.connection.ConnectionsHolder  : 1 connections initialized for redis/172.19.0.3:6379
+interview-app  | 2026-02-26T13:12:35.232Z  INFO 1 --- [ai-interview-platform] [sson-netty-1-24] o.redisson.connection.ConnectionsHolder  : 10 connections initialized for redis/172.19.0.3:6379
+interview-app  | 2026-02-26T13:12:35.278Z  INFO 1 --- [ai-interview-platform] [           main] i.guide.common.aspect.RateLimitAspect    : 限流 Lua 脚本加载完成, SHA1: bcd8f7a3922e36eaba0b014be90ae8e21cbd2b72
+interview-app  | 2026-02-26T13:12:36.371Z  INFO 1 --- [ai-interview-platform] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+interview-app  | 2026-02-26T13:12:41.914Z  INFO 1 --- [ai-interview-platform] [           main] i.g.m.i.listener.EvaluateStreamConsumer  : Redis Stream 消费者组已创建或已存在: evaluate-group
+interview-app  | 2026-02-26T13:12:41.914Z  INFO 1 --- [ai-interview-platform] [           main] i.g.m.i.listener.EvaluateStreamConsumer  : 评估消费者已启动: consumerName=evaluate-consumer-66cc6412
+interview-app  | 2026-02-26T13:12:42.246Z  INFO 1 --- [ai-interview-platform] [           main] o.s.a.v.pgvector.PgVectorStore           : Using the vector table name: vector_store. Is empty: false
+interview-app  | 2026-02-26T13:12:42.248Z  INFO 1 --- [ai-interview-platform] [           main] o.s.a.v.pgvector.PgVectorStore           : Initializing PGVectorStore schema for table: vector_store in schema: public
+interview-app  | 2026-02-26T13:12:42.248Z  INFO 1 --- [ai-interview-platform] [           main] o.s.a.v.pgvector.PgVectorStore           : vectorTableValidationsEnabled false
+interview-app  | 2026-02-26T13:12:48.412Z  INFO 1 --- [ai-interview-platform] [           main] i.g.m.k.l.VectorizeStreamConsumer        : Redis Stream 消费者组已创建或已存在: vectorize-group
+interview-app  | 2026-02-26T13:12:48.412Z  INFO 1 --- [ai-interview-platform] [           main] i.g.m.k.l.VectorizeStreamConsumer        : 向量化消费者已启动: consumerName=vectorize-consumer-35a97914
+interview-app  | 2026-02-26T13:12:53.827Z  INFO 1 --- [ai-interview-platform] [           main] i.g.m.r.listener.AnalyzeStreamConsumer   : Redis Stream 消费者组已创建或已存在: analyze-group
+interview-app  | 2026-02-26T13:12:53.828Z  INFO 1 --- [ai-interview-platform] [           main] i.g.m.r.listener.AnalyzeStreamConsumer   : 简历分析消费者已启动: consumerName=analyze-consumer-a06c7f58
+interview-app  | 2026-02-26T13:12:53.857Z  WARN 1 --- [ai-interview-platform] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+interview-app  | 2026-02-26T13:12:54.216Z  INFO 1 --- [ai-interview-platform] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+interview-app  | 2026-02-26T13:12:54.222Z  INFO 1 --- [ai-interview-platform] [           main] interview.guide.App                      : Started App in 24.084 seconds (process running for 23.585)
+interview-app  | 2026-02-26T13:13:09.921Z  INFO 1 --- [ai-interview-platform] [omcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+interview-app  | 2026-02-26T13:13:09.922Z  INFO 1 --- [ai-interview-platform] [omcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+interview-app  | 2026-02-26T13:13:09.922Z  INFO 1 --- [ai-interview-platform] [omcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+interview-app  | 2026-02-26T13:16:25.837Z  INFO 1 --- [ai-interview-platform] [omcat-handler-7] i.g.m.r.service.ResumeUploadService      : 收到简历上传请求: 张大林简历-测试坏样本.docx, 大小: 306172 bytes
+interview-app  | 2026-02-26T13:16:25.871Z  INFO 1 --- [ai-interview-platform] [omcat-handler-7] i.g.m.resume.service.ResumeParseService  : 开始解析简历文件: 张大林简历-测试坏样本.docx
+interview-app  | 2026-02-26T13:16:25.872Z  INFO 1 --- [ai-interview-platform] [omcat-handler-7] i.g.i.file.DocumentParseService          : 开始解析文件: 张大林简历-测试坏样本.docx
+interview-app  | 2026-02-26T13:16:26.546Z  INFO 1 --- [ai-interview-platform] [omcat-handler-7] i.g.i.file.DocumentParseService          : 文件解析成功，提取文本长度: 1906 字符
+interview-app  | 2026-02-26T13:16:26.751Z  INFO 1 --- [ai-interview-platform] [omcat-handler-7] i.g.i.file.FileStorageService            : 文件上传成功: 张大林简历-测试坏样本.docx -> resumes/2026/02/26/5c89ed13______-_____.docx
+interview-app  | 2026-02-26T13:16:26.751Z  INFO 1 --- [ai-interview-platform] [omcat-handler-7] i.g.m.r.service.ResumeUploadService      : 简历已存储到RustFS: resumes/2026/02/26/5c89ed13______-_____.docx
+interview-app  | 2026-02-26T13:16:26.788Z  INFO 1 --- [ai-interview-platform] [omcat-handler-7] i.g.m.r.s.ResumePersistenceService       : 简历已保存: id=4, hash=a0fd02622e891c0e391eb8d939ea94aef6f5f6c4cd59240e7aa53de1c42e5b97
+interview-app  | 2026-02-26T13:16:26.799Z  INFO 1 --- [ai-interview-platform] [omcat-handler-7] i.g.m.r.listener.AnalyzeStreamProducer   : 分析任务已发送到Stream: resumeId=4, messageId=1772111786799-0
+interview-app  | 2026-02-26T13:16:26.800Z  INFO 1 --- [ai-interview-platform] [omcat-handler-7] i.g.m.r.service.ResumeUploadService      : 简历上传完成，分析任务已入队: 张大林简历-测试坏样本.docx, resumeId=4
+interview-app  | 2026-02-26T13:16:26.800Z  INFO 1 --- [ai-interview-platform] [nalyze-consumer] i.g.m.r.listener.AnalyzeStreamConsumer   : 开始处理简历分析任务: resumeId=4, messageId=1772111786799-0, retryCount=0
+interview-app  | 2026-02-26T13:16:26.835Z  INFO 1 --- [ai-interview-platform] [nalyze-consumer] i.g.m.r.service.ResumeGradingService     : 开始分析简历，文本长度: 1906 字符
+interview-app  | 2026-02-26T13:16:54.985Z  INFO 1 --- [ai-interview-platform] [nalyze-consumer] i.g.m.r.service.ResumeGradingService     : 简历分析完成，总分: 42
+interview-app  | 2026-02-26T13:16:54.991Z  INFO 1 --- [ai-interview-platform] [nalyze-consumer] i.g.m.r.s.ResumePersistenceService       : 简历评测结果已保存: analysisId=9, resumeId=4, score=42
+interview-app  | 2026-02-26T13:16:55.000Z  INFO 1 --- [ai-interview-platform] [nalyze-consumer] i.g.m.r.listener.AnalyzeStreamConsumer   : 简历分析任务完成: resumeId=4, score=42
+interview-app  | 2026-02-26T13:20:02.357Z  INFO 1 --- [ai-interview-platform] [mcat-handler-36] i.g.m.k.s.KnowledgeBaseUploadService     : 收到知识库上传请求: Java 热门面试题 200 道.pdf, 大小: 11842033 bytes, category: null
+interview-app  | 2026-02-26T13:20:02.409Z  INFO 1 --- [ai-interview-platform] [mcat-handler-36] i.g.m.k.s.KnowledgeBaseParseService      : 开始解析知识库文件: Java 热门面试题 200 道.pdf
+interview-app  | 2026-02-26T13:20:02.409Z  INFO 1 --- [ai-interview-platform] [mcat-handler-36] i.g.i.file.DocumentParseService          : 开始解析文件: Java 热门面试题 200 道.pdf
+interview-app  | 2026-02-26T13:20:03.327Z  INFO 1 --- [ai-interview-platform] [mcat-handler-36] i.g.i.file.DocumentParseService          : 文件解析成功，提取文本长度: 146378 字符
+interview-app  | 2026-02-26T13:20:03.382Z  INFO 1 --- [ai-interview-platform] [mcat-handler-36] i.g.i.file.FileStorageService            : 文件上传成功: Java 热门面试题 200 道.pdf -> knowledgebases/2026/02/26/4cc6ebf8_Java_______200__.pdf
+interview-app  | 2026-02-26T13:20:03.382Z  INFO 1 --- [ai-interview-platform] [mcat-handler-36] i.g.m.k.s.KnowledgeBaseUploadService     : 知识库已存储到RustFS: knowledgebases/2026/02/26/4cc6ebf8_Java_______200__.pdf
+interview-app  | 2026-02-26T13:20:03.386Z  INFO 1 --- [ai-interview-platform] [mcat-handler-36] .g.m.k.s.KnowledgeBasePersistenceService : 知识库已保存: id=1, name=Java 热门面试题 200 道, category=null, hash=24bf5029bffe390fc42ac515fa0ffb490a5f7b0774a3f2cd5a51764d83d9b1a6
+interview-app  | 2026-02-26T13:20:03.391Z  INFO 1 --- [ai-interview-platform] [mcat-handler-36] i.g.m.k.l.VectorizeStreamProducer        : 向量化任务已发送到Stream: kbId=1, messageId=1772112003390-0
+interview-app  | 2026-02-26T13:20:03.391Z  INFO 1 --- [ai-interview-platform] [mcat-handler-36] i.g.m.k.s.KnowledgeBaseUploadService     : 知识库上传完成，向量化任务已入队: Java 热门面试题 200 道.pdf, kbId=1
+interview-app  | 2026-02-26T13:20:03.393Z  INFO 1 --- [ai-interview-platform] [torize-consumer] i.g.m.k.l.VectorizeStreamConsumer        : 开始处理向量化任务: kbId=1, messageId=1772112003390-0, retryCount=0
+interview-app  | 2026-02-26T13:20:03.401Z  INFO 1 --- [ai-interview-platform] [torize-consumer] i.g.m.k.s.KnowledgeBaseVectorService     : 开始向量化知识库: kbId=1, contentLength=146378
+interview-app  | 2026-02-26T13:20:03.402Z  INFO 1 --- [ai-interview-platform] [torize-consumer] i.g.m.k.repository.VectorRepository      : 开始删除知识库向量数据: kbId=1
+interview-app  | 2026-02-26T13:20:03.415Z  INFO 1 --- [ai-interview-platform] [torize-consumer] i.g.m.k.repository.VectorRepository      : 成功删除知识库向量数据: kbId=1, 删除行数=151
+interview-app  | 2026-02-26T13:20:05.087Z  INFO 1 --- [ai-interview-platform] [torize-consumer] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 151 chunks.
+interview-app  | 2026-02-26T13:20:05.089Z  INFO 1 --- [ai-interview-platform] [torize-consumer] i.g.m.k.s.KnowledgeBaseVectorService     : 文本分块完成: 151 个chunks
+interview-app  | 2026-02-26T13:20:05.089Z  INFO 1 --- [ai-interview-platform] [torize-consumer] i.g.m.k.s.KnowledgeBaseVectorService     : 开始分批向量化: 总共 151 个chunks，分 16 批处理，每批最多 10 个
+interview-app  | 2026-02-26T13:20:17.118Z  INFO 1 --- [ai-interview-platform] [torize-consumer] i.g.m.k.s.KnowledgeBaseVectorService     : 知识库向量化完成: kbId=1, chunks=151, batches=16
+interview-app  | 2026-02-26T13:20:17.125Z  INFO 1 --- [ai-interview-platform] [torize-consumer] i.g.m.k.l.VectorizeStreamConsumer        : 向量化任务完成: kbId=1
+interview-app  | 2026-02-26T13:27:45.575Z  INFO 1 --- [ai-interview-platform] [mcat-handler-62] i.g.m.k.service.RagChatSessionService    : 创建 RAG 聊天会话: id=1, title=Java 热门面试题 200 道
+interview-app  | 2026-02-26T13:27:45.600Z  INFO 1 --- [ai-interview-platform] [mcat-handler-63] i.g.m.knowledgebase.RagChatController    : 收到 RAG 聊天流式请求: sessionId=1, question=JVM原理是什么, 线程: VirtualThread[#214,tomcat-handler-63]/runnable@ForkJoinPool-1-worker-13 (虚拟线程: true)
+interview-app  | 2026-02-26T13:27:45.621Z  INFO 1 --- [ai-interview-platform] [mcat-handler-63] i.g.m.k.service.RagChatSessionService    : 准备流式消息: sessionId=1, messageId=2
+interview-app  | 2026-02-26T13:27:45.626Z  INFO 1 --- [ai-interview-platform] [mcat-handler-63] i.g.m.k.s.KnowledgeBaseQueryService      : 收到知识库流式提问: kbIds=[1], question=JVM原理是什么
+interview-app  | 2026-02-26T13:27:45.643Z  INFO 1 --- [ai-interview-platform] [mcat-handler-63] i.g.m.k.s.KnowledgeBaseVectorService     : 向量相似度搜索: query=JVM原理是什么, kbIds=[1], topK=5
+interview-app  | 2026-02-26T13:27:45.932Z  INFO 1 --- [ai-interview-platform] [mcat-handler-63] i.g.m.k.s.KnowledgeBaseVectorService     : 搜索完成: 找到 4 个相关文档
+interview-app  | 2026-02-26T13:27:45.936Z  INFO 1 --- [ai-interview-platform] [mcat-handler-63] i.g.m.k.s.KnowledgeBaseQueryService      : 开始流式输出知识库回答: kbIds=[1]
+interview-app  | 2026-02-26T13:28:19.290Z  INFO 1 --- [ai-interview-platform] [oundedElastic-3] i.g.m.k.s.KnowledgeBaseQueryService      : 流式输出完成: kbIds=[1]
+interview-app  | 2026-02-26T13:28:19.294Z  INFO 1 --- [ai-interview-platform] [oundedElastic-3] i.g.m.k.service.RagChatSessionService    : 完成流式消息: messageId=2, contentLength=2449
+interview-app  | 2026-02-26T13:28:19.298Z  INFO 1 --- [ai-interview-platform] [oundedElastic-3] i.g.m.knowledgebase.RagChatController    : RAG 聊天流式完成: sessionId=1, messageId=2
+interview-app  | 2026-02-26T13:29:04.364Z  INFO 1 --- [ai-interview-platform] [mcat-handler-80] i.g.m.knowledgebase.RagChatController    : 收到 RAG 聊天流式请求: sessionId=1, question=面试官一般会怎么提问JVM相关的问题，我该怎么回答, 线程: VirtualThread[#538,tomcat-handler-80]/runnable@ForkJoinPool-1-worker-15 (虚拟线程: true)
+interview-app  | 2026-02-26T13:29:04.368Z  INFO 1 --- [ai-interview-platform] [mcat-handler-80] i.g.m.k.service.RagChatSessionService    : 准备流式消息: sessionId=1, messageId=4
+interview-app  | 2026-02-26T13:29:04.372Z  INFO 1 --- [ai-interview-platform] [mcat-handler-80] i.g.m.k.s.KnowledgeBaseQueryService      : 收到知识库流式提问: kbIds=[1], question=面试官一般会怎么提问JVM相关的问题，我该怎么回答
+interview-app  | 2026-02-26T13:29:04.377Z  INFO 1 --- [ai-interview-platform] [mcat-handler-80] i.g.m.k.s.KnowledgeBaseVectorService     : 向量相似度搜索: query=面试官一般会怎么提问JVM相关的问题，我该怎么回答, kbIds=[1], topK=5
+interview-app  | 2026-02-26T13:29:04.601Z  INFO 1 --- [ai-interview-platform] [mcat-handler-80] i.g.m.k.s.KnowledgeBaseVectorService     : 搜索完成: 找到 4 个相关文档
+interview-app  | 2026-02-26T13:29:04.602Z  INFO 1 --- [ai-interview-platform] [mcat-handler-80] i.g.m.k.s.KnowledgeBaseQueryService      : 开始流式输出知识库回答: kbIds=[1]
+interview-app  | 2026-02-26T13:29:35.250Z  INFO 1 --- [ai-interview-platform] [oundedElastic-3] i.g.m.k.s.KnowledgeBaseQueryService      : 流式输出完成: kbIds=[1]
+interview-app  | 2026-02-26T13:29:35.252Z  INFO 1 --- [ai-interview-platform] [oundedElastic-3] i.g.m.k.service.RagChatSessionService    : 完成流式消息: messageId=4, contentLength=2288
+interview-app  | 2026-02-26T13:29:35.256Z  INFO 1 --- [ai-interview-platform] [oundedElastic-3] i.g.m.knowledgebase.RagChatController    : RAG 聊天流式完成: sessionId=1, messageId=4

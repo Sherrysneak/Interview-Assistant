@@ -1,0 +1,151 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* 自定义主题 */
+@theme {
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-200: #c7d2fe;
+  --color-primary-300: #a5b4fc;
+  --color-primary-400: #818cf8;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+  --color-primary-700: #4338ca;
+  --color-primary-800: #3730a3;
+  --color-primary-900: #312e81;
+  
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 
+    'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, 
+    Arial, sans-serif;
+}
+
+/* 自定义基础样式 */
+@layer base {
+  html, body, #root {
+    @apply h-full m-0 p-0;
+  }
+  
+  body {
+    @apply font-sans antialiased bg-linear-to-br from-slate-50 to-indigo-50 text-slate-900;
+  }
+  
+  #root {
+    @apply min-h-screen;
+  }
+}
+
+/* 自定义滚动条 */
+@layer utilities {
+  @property --siri-border-angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 210deg;
+  }
+
+  @keyframes siri-glow-orbit {
+    0% {
+      --siri-border-angle: 210deg;
+      filter: hue-rotate(0deg) saturate(1) brightness(1);
+    }
+    100% {
+      --siri-border-angle: 570deg;
+      filter: hue-rotate(22deg) saturate(1.08) brightness(1.02);
+    }
+  }
+
+  @keyframes siri-glow-breathe {
+    0%,
+    100% {
+      opacity: 0.28;
+      transform: scale(0.985);
+    }
+    50% {
+      opacity: 0.44;
+      transform: scale(1.02);
+    }
+  }
+
+  .upload-glow-shell {
+    position: relative;
+    isolation: isolate;
+    overflow: visible;
+  }
+
+  .upload-glow-shell::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    pointer-events: none;
+    z-index: 0;
+    border-radius: 1rem;
+    padding: 1.6px;
+    background: conic-gradient(
+      from var(--siri-border-angle),
+      rgba(92, 126, 255, 0.58) 0deg,
+      rgba(74, 222, 255, 0.52) 82deg,
+      rgba(214, 141, 255, 0.56) 168deg,
+      rgba(68, 225, 196, 0.5) 262deg,
+      rgba(92, 126, 255, 0.58) 360deg
+    );
+    animation: siri-glow-orbit 8.8s cubic-bezier(0.45, 0.05, 0.22, 0.98) infinite;
+    box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.07), 0 8px 22px rgba(55, 65, 220, 0.12);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  .upload-glow-shell::after {
+    content: '';
+    position: absolute;
+    inset: -14px;
+    pointer-events: none;
+    z-index: 0;
+    border-radius: 1.2rem;
+    background:
+      radial-gradient(55% 45% at 18% 50%, rgba(56, 189, 248, 0.24), rgba(56, 189, 248, 0) 72%),
+      radial-gradient(48% 40% at 82% 52%, rgba(167, 139, 250, 0.24), rgba(167, 139, 250, 0) 72%),
+      radial-gradient(34% 30% at 50% 86%, rgba(45, 212, 191, 0.19), rgba(45, 212, 191, 0) 72%);
+    filter: blur(10px) saturate(1.05);
+    animation: siri-glow-breathe 6.6s ease-in-out infinite;
+  }
+
+  .upload-glow-shell--active::before {
+    background: conic-gradient(
+      from var(--siri-border-angle),
+      rgba(97, 118, 255, 0.85) 0deg,
+      rgba(34, 211, 238, 0.78) 84deg,
+      rgba(232, 121, 249, 0.84) 170deg,
+      rgba(45, 212, 191, 0.75) 262deg,
+      rgba(97, 118, 255, 0.85) 360deg
+    );
+    animation-duration: 3.2s;
+    box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.22), 0 0 30px rgba(99, 102, 241, 0.3), 0 16px 38px rgba(56, 189, 248, 0.2);
+  }
+
+  .upload-glow-shell--active::after {
+    opacity: 0.56;
+    filter: blur(12px) saturate(1.18);
+    animation-duration: 3.9s;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .upload-glow-shell::before,
+    .upload-glow-shell::after,
+    .upload-glow-shell--active::before,
+    .upload-glow-shell--active::after {
+      animation: none;
+    }
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-slate-100 rounded;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 rounded hover:bg-slate-400;
+  }
+}
